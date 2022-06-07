@@ -6,6 +6,9 @@ This is an BMI calculator developed using Flutter, and the design of this app is
 
 This is the landing page of the app, where you have option to select gender, height, weight, and age, when you will
 click on the calculate buttom, the app will redirect you to the result page.
+_______________________________________________________________________________________________________________________
+
+
 
 ![image](https://user-images.githubusercontent.com/71991617/172379883-e160a024-a46d-49dd-908c-24b2a498d5aa.png)
  
