@@ -14,4 +14,4 @@ This is the Result page of the app, where the user will get to know the BMI, and
 
 ![image](https://user-images.githubusercontent.com/71991617/172379883-e160a024-a46d-49dd-908c-24b2a498d5aa.png)
  
- 
+ Design Inspiration:- https://dribbble.com/shots/4585382-Simple-BMI-Calculator
