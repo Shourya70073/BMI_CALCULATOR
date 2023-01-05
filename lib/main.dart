@@ -16,8 +16,8 @@ void main() {
   );
 }
 
-const Inactivecardcolour = Color(0xFF1D1E33);
-const Activecolour = Color(0xFF111328);
+const Inactivecardcolour = Color(0xFFbad045);
+const Activecolour = Color.fromARGB(255, 156, 175, 45);
 var Malecardcolor = Inactivecardcolour;
 var Femalecardcolor = Inactivecardcolour;
 
@@ -42,29 +42,30 @@ class Result extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(
             title: Text("BMI CALCULATOR "),
-            backgroundColor: Color(0XFF0A0E21),
+            backgroundColor: Colors.black,
           ),
-          backgroundColor: Color(0XFF0A0E21),
+          backgroundColor: Colors.white,
           body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Expanded(
                   child: Container(
-                      child: Text(
+                      child: const Text(
                 "Your Result",
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 30,
                     fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
               ))),
               Expanded(
                 flex: 5,
                 child: Card(
-                  colour: Color(0xFF1D1F33),
+                  colour: Color(0xFFbad045),
                   childcard: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
@@ -75,22 +76,23 @@ class Result extends StatelessWidget {
                           ans,
                           style: TextStyle(
                               fontSize: 25,
-                              color: Colors.green,
+                              color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
                         Text(
-                          (bmi.toString()).substring(0,4),
+                          (bmi.toString()).substring(0, 4),
                           style: TextStyle(
                               fontSize: 70,
-                              color: Colors.white,
+                              color: Colors.black,
                               fontWeight: FontWeight.w900),
                         ),
                         Text(
                           suggestion,
                           style: TextStyle(
                               fontSize: 20,
-                              color: Colors.white,
+                              color: Colors.black,
                               fontWeight: FontWeight.w900),
+                          textAlign: TextAlign.center,
                         ),
                       ],
                     ),
@@ -110,11 +112,11 @@ class Result extends StatelessWidget {
                         child: Text(
                       "RE-CALCULATE YOUR BMI ",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xFFbad045),
                         fontWeight: FontWeight.bold,
                       ),
                     )),
-                    color: Color(0xFFEB1555),
+                    color: Colors.black,
                   ),
                 ),
               )
@@ -193,9 +195,9 @@ class _inputState extends State<input> {
     return (Scaffold(
         appBar: AppBar(
           title: Text("BMI CALCULATOR"),
-          backgroundColor: Color(0XFF0A0E21),
+          backgroundColor: Colors.black,
         ),
-        backgroundColor: Color(0xFF0A0E21),
+        backgroundColor: Colors.white,
         body: Column(
           children: [
             Expanded(
@@ -208,8 +210,11 @@ class _inputState extends State<input> {
                       },
                       child: Card(
                         colour: Malecardcolor,
-                        childcard:
-                            Iconn(ico: FontAwesomeIcons.mars, text: "MALE"),
+                        childcard: Iconn(
+                          ico: FontAwesomeIcons.mars,
+                          text: "MALE",
+                          color: Color(0xFF),
+                        ),
                       ),
                     ),
                   ),
@@ -219,9 +224,13 @@ class _inputState extends State<input> {
                         tap(Gender.female);
                       },
                       child: Card(
-                          colour: Femalecardcolor,
-                          childcard: Iconn(
-                              ico: FontAwesomeIcons.venus, text: "FEMALE")),
+                        colour: Femalecardcolor,
+                        childcard: Iconn(
+                          ico: FontAwesomeIcons.venus,
+                          text: "FEMALE",
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
                   )
                 ],
@@ -231,7 +240,7 @@ class _inputState extends State<input> {
                 child: Row(children: [
               Expanded(
                 child: Card(
-                  colour: Color(0xFF1D1E33),
+                  colour: Color(0xFFbad045),
                   childcard: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
@@ -241,7 +250,7 @@ class _inputState extends State<input> {
                           "HEIGHT",
                           style: TextStyle(
                               fontSize: 15,
-                              color: Colors.white,
+                              color: Colors.black,
                               fontWeight: FontWeight.bold),
                         ),
                         SizedBox(
@@ -254,14 +263,14 @@ class _inputState extends State<input> {
                               height.toString(),
                               style: TextStyle(
                                   fontWeight: FontWeight.w900,
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   fontSize: 33),
                             ),
                             Text(
                               " cm",
                               style: TextStyle(
                                   fontWeight: FontWeight.w900,
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   fontSize: 20),
                             )
                           ],
@@ -270,7 +279,7 @@ class _inputState extends State<input> {
                           data: SliderTheme.of(context).copyWith(
                             activeTrackColor: Colors.white,
                             inactiveTrackColor: Colors.grey,
-                            thumbColor: Color(0xFFEB1555),
+                            thumbColor: Colors.black,
                             overlayColor: Color(0x29EB1555),
                             thumbShape:
                                 RoundSliderThumbShape(enabledThumbRadius: 15.0),
@@ -298,14 +307,14 @@ class _inputState extends State<input> {
                 children: [
                   Expanded(
                       child: Card(
-                    colour: Color(0xFF1D1E33),
+                    colour: Color(0xFFbad045),
                     childcard: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           "WEIGHT",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontSize: 15,
                               fontWeight: FontWeight.bold),
                         ),
@@ -314,7 +323,7 @@ class _inputState extends State<input> {
                           weight.toString(),
                           style: TextStyle(
                               fontSize: 30,
-                              color: Colors.white,
+                              color: Colors.black,
                               fontWeight: FontWeight.w900),
                         ),
                         SizedBox(height: 7),
@@ -327,9 +336,9 @@ class _inputState extends State<input> {
                                     weight--;
                                   });
                                 },
-                                splashColor: Colors.pink,
+                                splashColor: Colors.black,
                                 child: Icon(Icons.remove),
-                                backgroundColor: Color(0xFF212747)),
+                                backgroundColor: Colors.black),
                             SizedBox(
                               width: 20,
                             ),
@@ -339,9 +348,9 @@ class _inputState extends State<input> {
                                   weight++;
                                 });
                               },
-                              splashColor: Colors.pink,
+                              splashColor: Colors.black,
                               child: Icon(Icons.add),
-                              backgroundColor: Color(0xFF212747),
+                              backgroundColor: Colors.black,
                             )
                           ],
                         )
@@ -350,14 +359,14 @@ class _inputState extends State<input> {
                   )),
                   Expanded(
                     child: Card(
-                      colour: Color(0xFF1D1E33),
+                      colour: Color(0xFFbad045),
                       childcard: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "AGE",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -366,7 +375,7 @@ class _inputState extends State<input> {
                             age.toString(),
                             style: TextStyle(
                                 fontSize: 30,
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontWeight: FontWeight.w900),
                           ),
                           SizedBox(height: 7),
@@ -379,9 +388,9 @@ class _inputState extends State<input> {
                                       age--;
                                     });
                                   },
-                                  splashColor: Colors.pink,
+                                  splashColor: Colors.black,
                                   child: Icon(Icons.remove),
-                                  backgroundColor: Color(0xFF212747)),
+                                  backgroundColor: Colors.black),
                               SizedBox(
                                 width: 20,
                               ),
@@ -393,7 +402,7 @@ class _inputState extends State<input> {
                                 },
                                 splashColor: Colors.pink,
                                 child: Icon(Icons.add),
-                                backgroundColor: Color(0xFF212747),
+                                backgroundColor: Colors.black,
                               )
                             ],
                           )
@@ -423,11 +432,11 @@ class _inputState extends State<input> {
                       child: Text(
                     "CALCULATE YOUR BMI ",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Color(0xFFbad045),
                       fontWeight: FontWeight.bold,
                     ),
                   )),
-                  color: Color(0xFFEB1555),
+                  color: Colors.black,
                 ),
               ),
             )
@@ -439,7 +448,8 @@ class _inputState extends State<input> {
 class Iconn extends StatelessWidget {
   final IconData ico;
   final String text;
-  const Iconn({required this.ico, required this.text});
+  final Color color;
+  const Iconn({required this.ico, required this.text, required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -468,7 +478,8 @@ class Iconn extends StatelessWidget {
 class Card extends StatelessWidget {
   final Color colour;
   final Widget? childcard;
-  const Card({required this.colour, this.childcard});
+  final ShapeBorder? shape;
+  Card({required this.colour, this.childcard, this.shape});
 
   @override
   Widget build(BuildContext context) {
